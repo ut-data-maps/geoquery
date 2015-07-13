@@ -1,0 +1,28 @@
+{
+  "name": "geoquery",
+  "version": "0.0.1",
+  "description": "Using open data to provide informative visualizations for Utahns, about issues such as food deserts, clean air, drought conditions, etc.",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ut-data-maps/geoquery.git"
+  },
+  "keywords": [
+    "food",
+    "health",
+    "groceries",
+    "water",
+    "air",
+    "social",
+    "visualization"
+  ],
+  "author": "MetaSean",
+  "license": "No License",
+  "bugs": {
+    "url": "https://github.com/ut-data-maps/geoquery/issues"
+  },
+  "homepage": "https://github.com/ut-data-maps/geoquery#readme"
+}

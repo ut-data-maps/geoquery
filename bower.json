@@ -1,0 +1,29 @@
+{
+  "name": "geoquery",
+  "version": "0.0.1",
+  "authors": [
+    "MetaSean <metasean@users.noreply.github.com>"
+  ],
+  "description": "Using open data to provide informative visualizations for Utahns, about issues such as food deserts, clean air, drought conditions, etc.",
+  "main": "app/index.html",
+  "moduleType": [
+    "es6"
+  ],
+  "keywords": [
+    "food",
+    "health",
+    "groceries",
+    "water",
+    "air",
+    "social",
+    "visualization"
+  ],
+  "license": "No License",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
