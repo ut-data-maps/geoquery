@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/ut-data-maps/geoquery/issues"
   },
-  "homepage": "https://github.com/ut-data-maps/geoquery#readme"
+  "homepage": "https://github.com/ut-data-maps/geoquery#readme",
+  "dependencies": {
+    "maki": "git+https://github.com/mapbox/maki.git#mb-pages"
+  }
 }

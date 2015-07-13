@@ -25,5 +25,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "Leaflet.MakiMarkers": "~1.0.1"
+  }
 }
