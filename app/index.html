@@ -3,9 +3,10 @@
 <head>
 	<title>Where's the veg!</title>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css"/>
 	<link rel="stylesheet" href="styles/app.css"/>
+	<script src="gun.js"></script>
 </head>
 <body>
 	<!-- What we're going to show them and why -->
@@ -15,12 +16,13 @@
 	<p>Food deserts are defined as parts of the country vapid of fresh fruit, vegetables, and other healthful whole foods, usually found in impoverished areas. This is largely due to a lack of grocery stores, farmers’ markets, and healthy food providers.</p>
 	<p>The map below shows all Utah grocery stores.  More specifically, these are businesses registered as <a href="http://www.bls.gov/oes/current/naics4_445100.htm">NAICS #445100</a>) in the <a href="https://opendata.utah.gov/Business-Economy/Employers-In-Utah-Firmfind-Except-Salt-Lake/ni5h-hag4">Employers in Utah (Firmfind) Except Salt Lake</a> and <a href="https://opendata.utah.gov/Business-Economy/Employers-SL-County/rvrt-7t4n">Employers SL County</a>.</p>
 
-	<!-- Show them -->
+	<!-- Showing them -->
 	<div id="map"></div>
 
-	<!-- Pay no attention to the man behind the curtain! -->
+	<!-- Pay no attention to the scripts behind the curtain! -->
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
 	<script src="../bower_components/Leaflet.MakiMarkers/Leaflet.MakiMarkers.js"></script>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<script src="scripts/app.js"></script>
 	<script src="scripts/grocery.js"></script>
 </body>

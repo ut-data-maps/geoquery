@@ -4,6 +4,7 @@
   "description": "Using open data to provide informative visualizations for Utahns, about issues such as food deserts, clean air, drought conditions, etc.",
   "main": "app/index.js",
   "scripts": {
+    "start": "node app/express.js 4200",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,6 +27,8 @@
   },
   "homepage": "https://github.com/ut-data-maps/geoquery#readme",
   "dependencies": {
+    "express": "^4.13.1",
+    "gun": "amark/gun#5059926b0b",
     "maki": "git+https://github.com/mapbox/maki.git#mb-pages"
   }
 }

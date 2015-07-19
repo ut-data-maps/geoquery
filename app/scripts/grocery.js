@@ -6,6 +6,22 @@
 var groceryMarker = L.MakiMarkers
 				  .icon({icon: "grocery", color: "#0b0", size: "m"});
 
-L.marker([40.750001, -111.883334], {icon: groceryMarker})
-	.addTo(map)
-	.bindPopup("<b>Hello world!</b><br />I might be a grocery store.");
+function showAllGroceries () {
+	socrata.map().val(function (store) {
+		if (!store.location_1) { return; }
+		this.path('location_1').val(function(coordinate) {
+			var item = {};
+			item.storeName = store.name;
+			item.lat = coordinate.latitude;
+			item.lng = coordinate.longitude;
+			showGrocery(item);
+		})
+	})
+}
+
+function showGrocery (item) {
+	console.log(item);
+	L.marker([item.lat, item.lng], {icon: groceryMarker})
+		.addTo(map)
+		.bindPopup(item.storeName);
+}
