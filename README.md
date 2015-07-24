@@ -19,3 +19,15 @@ To get it up and running locally:
  4. `npm install`
  5. `npm start`
  6. navigate to [http://localhost:4200/](http://localhost:4200/).
+
+
+### gun notes
+
+When doing development, it is sometimes useful to wipe out all gun data.  To successfully wipe data three things must happen:
+  - local server must be stopped
+  - local 'data.json' file must be deleted
+  - browser's local storage must be cleared (from the tab's dev tools console, run `localstorage.clear()`)
+
+The order of the above doesn't matter, however it is recommended that the server be stopped first to ensure it doesn't replace a deleted 'data.json' file or the localstorage.  Once all three steps are completed, the server can be restarted.
+
+For more information, refer to the [gun wiki](https://github.com/amark/gun/wiki) or ping the crew via the [gun gitter](https://gitter.im/amark/gun).

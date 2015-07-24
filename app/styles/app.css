@@ -1,4 +1,16 @@
 #map { 
 	width: 600px; 
-	height: 800px;
+	height: 825px;
+}
+
+.logos {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logos img {
+    width: 20rem;
+    max-height: 8rem;
 }
