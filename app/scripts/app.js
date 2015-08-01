@@ -33,16 +33,24 @@ socrata.map().val(function (s) {
 	items.push(s.name, s.naics, s.phone, s.ownership, s.emprangecode) ;
 	var tsv_build = items.join("\t") + "\n";
 	tsv += tsv_build;
-	//process.stdout.write(tsv_build);
-	console.log(tsv_build);
+	//process.stdout.write(tsv_build); <=== NEEDS TO BE A console.log
+//	console.log(tsv_build); // takes up all of my console output :-(
 });
-console.log(tsv);
+//console.log(tsv); <=== WAS BEING CALLED BEFORE tsv WAS BUILT
 
 
 /*
 		Once data is loaded, add relevant markers
+		and output completed the completed tsv var
 
+		Loops for when there are timing hiccups
  */
-setTimeout(function() {
-	window.showAllGroceries(); // scripts/grocery.js
-}, 100);
+var decrementor = 5;
+(function loop(){
+	setTimeout(function(){
+		window.showAllGroceries(); // scripts/grocery.js
+		console.log(tsv);
+		decrementor = decrementor - 1;
+		if (decrementor > 0) {loop()};
+	}, 100);
+})();

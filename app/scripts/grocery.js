@@ -12,8 +12,8 @@ function showAllGroceries () {
 		this.path('location_1').val(function(coordinate) {
 			var item = {};
 			item.storeName = store.name || "ERROR in storeName";
-			item.lat = coordinate.latitude || "42.066586"; // failure shows north of Utah
-			item.lng = coordinate.longitude || "-109.003007"; // failure shows east of Utah
+			item.lat = (!coordinate || !coordinate.latitude) ? 42.066586 : coordinate.latitude; // failure shows north of Utah
+			item.lng = (!coordinate || !coordinate.longitude) ? -109.003007 : coordinate.longitude; // failure shows east of Utah
 			showGrocery(item);
 		})
 	})
