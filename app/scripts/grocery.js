@@ -11,16 +11,16 @@ function showAllGroceries () {
 		if (!store.location_1) { return; }
 		this.path('location_1').val(function(coordinate) {
 			var item = {};
-			item.storeName = store.name;
-			item.lat = coordinate.latitude;
-			item.lng = coordinate.longitude;
+			item.storeName = store.name || "ERROR in storeName";
+			item.lat = coordinate.latitude || "42.066586"; // failure shows north of Utah
+			item.lng = coordinate.longitude || "-109.003007"; // failure shows east of Utah
 			showGrocery(item);
 		})
 	})
 }
 
 function showGrocery (item) {
-	console.log(item);
+//	console.log(item);
 	L.marker([item.lat, item.lng], {icon: groceryMarker})
 		.addTo(map)
 		.bindPopup(item.storeName);

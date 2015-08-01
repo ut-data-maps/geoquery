@@ -25,6 +25,20 @@ var gun = Gun(location.origin + '/gun');
 var socrata = gun.get('socrata').not(getSocrata);
 
 
+// Loop through the "rows" of data to build CSV structure
+var tsv = 'empty'; // store TSV data
+socrata.map().val(function (s) {
+	if (!s.location_1) { return; }
+	var items = new Array();
+	items.push(s.name, s.naics, s.phone, s.ownership, s.emprangecode) ;
+	var tsv_build = items.join("\t") + "\n";
+	tsv += tsv_build;
+	//process.stdout.write(tsv_build);
+	console.log(tsv_build);
+});
+console.log(tsv);
+
+
 /*
 		Once data is loaded, add relevant markers
 
